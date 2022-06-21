@@ -1,2 +1,2 @@
-auzreml-core>=1.15.0
+auzreml-core
 ipykernel
