@@ -4,6 +4,9 @@
 ARG VARIANT="3.10-bullseye"
 FROM mcr.microsoft.com/vscode/devcontainers/python:0-${VARIANT}
 
+# Define the path to the virtualenv to work with
+ARG VENV_PATH="/home/vscode/venv"
+
 # [Optional] If your pip requirements rarely change, uncomment this section to add them to the image.
 COPY requirements.txt /tmp/pip-tmp/
 RUN su vscode -c "python -m venv /home/vscode/venv" \
